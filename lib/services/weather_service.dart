@@ -17,7 +17,7 @@ class WeatherService {
       return weatherModel;
     }  on DioException catch (e) {
       log(e.toString());
-      const String errMessage = e.response?.data['error']['message'] ?? 'Oops there was an error, Try later!';
+      String errMessage = e.response?.data['error']['message'] ?? 'Oops there was an error, Try later!';
       throw Exception(errMessage);
     }catch(e){
       log(e.toString());
