@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/screens/search_screen.dart';
 
-import '../cubits/get_weather_cubit/get_weather_cubit.dart';
-import '../models/weather_model.dart';
-import '../weather_app.dart';
 
 class NoWeatherWidget extends StatelessWidget {
    NoWeatherWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    WeatherModel? weatherModel =
-    BlocProvider.of<GetWeatherCubit>(context).weatherModel;
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
